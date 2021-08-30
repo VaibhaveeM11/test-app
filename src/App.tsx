@@ -6,22 +6,23 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-const App: React.FC = () => (
-    <ThemeProvider theme={defaultTheme}>
-        <>
-            <CssBaseline />
-            <Router>
-                <ErrorBoundary>
-                    <PageLayout>
-                        <ToastContainer position="top-end" />
-                        <SideNav />
-                        <Header />
-                        <Routes />
-                    </PageLayout>
-                </ErrorBoundary>
-            </Router>
-        </>
-    </ThemeProvider>
-);
-
+const App: React.FC = () => {
+    return (
+        <ThemeProvider theme={defaultTheme}>
+            <>
+                <CssBaseline />
+                <Router>
+                    <ErrorBoundary>
+                        <PageLayout>
+                            <ToastContainer position="top-end" />
+                            <SideNav />
+                            <Header />
+                            <Routes />
+                        </PageLayout>
+                    </ErrorBoundary>
+                </Router>
+            </>
+        </ThemeProvider>
+    );
+};
 export default App;
